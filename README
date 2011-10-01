@@ -1,0 +1,13 @@
+An hack showing how to obtain the process ID of a JVM using the JVM attach API.
+
+The Main class has two main methods:
+- the classic main method iterates over all the virtual machine found using the JVM attach API. Each found JVM will be attached an agent (the same class) that will determine if the JVM is the same as the originating host (through a simple system property)
+- the other main method named "agentmain" is executed when the agent is loaded
+
+The example can be executed with a "java -jar PID.jar".
+
+Read http://blog.igorminar.com/2007/03/how-java-application-can-discover-its.html to find other ways to discover a JVM process id.
+
+have fun
+
+Julien
